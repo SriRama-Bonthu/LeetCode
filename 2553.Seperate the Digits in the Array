@@ -1,0 +1,18 @@
+class Solution {
+    public int[] separateDigits(int[] nums) {
+        Stack<Integer> s=new Stack<>();
+        int re=0;
+        for(int i=0;i<nums.length;i++){
+            int num=nums[i];
+            String ss=String.valueOf(num);
+            for(int j=0;j<ss.length();j++){
+                s.push(ss.charAt(j)-'0');
+            }
+        }
+        int[] arr=new int[s.size()];
+        for(int i=arr.length-1;i>=0;i--){
+            arr[i]=s.pop();
+        }
+        return arr;
+    }
+}
