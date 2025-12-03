@@ -1,0 +1,19 @@
+class Solution {
+    public int wateringPlants(int[] plants, int capacity) {
+        int c=0;
+        int rw=capacity;
+        int i=0;
+        while(i<plants.length){
+            if(plants[i]<=rw){
+                c++;
+                rw=rw-plants[i];
+                i++;
+            }
+            else{
+                rw=capacity;
+                c=c+(i*2);
+            }
+        }
+        return c;
+    }
+}
