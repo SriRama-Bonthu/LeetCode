@@ -1,0 +1,39 @@
+class Solution {
+    public List<Integer> busiestServers(int k, int[] arrival, int[] load) {
+        int n = arrival.length;
+        PriorityQueue<Pair<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> a.getKey() - b.getKey());
+        HashMap<Integer, Integer> hm = new HashMap<>();
+        TreeSet<Integer> ts = new TreeSet<>();
+        int ser = 0;
+        for (int i = 0; i < n; i++) {
+            if (i < k) {
+                pq.add(new Pair<>((arrival[i] + load[i]), ser));
+                hm.put(ser, hm.getOrDefault(ser, 0) + 1);
+                ser++;
+            } else {
+                while (!pq.isEmpty() && pq.peek().getKey() <= arrival[i]) {
+                    ts.add(pq.poll().getValue());
+                }
+                if (ts.isEmpty())
+                    continue;
+                Integer serve = ts.ceiling(i % k); //Checks for smallest element that is >= i%k in ts
+                if (serve == null)
+                    serve = ts.first(); // If there is not element in set that is >= i%k in ts then server is first element in ts.
+                ts.remove(serve);
+                pq.add(new Pair<>(arrival[i] + load[i], serve));
+                hm.put(serve, hm.getOrDefault(serve, 0) + 1);
+            }
+        }
+        int max = 0;
+    for(int val : hm.values()) {
+    max = Math.max(max, val);   
+    }
+List<Integer> res = new ArrayList<>();
+for(int i = 0; i < k; i++) {
+    if(hm.getOrDefault(i, 0) == max) {
+        res.add(i);
+    }
+}
+return res;
+    }
+}
