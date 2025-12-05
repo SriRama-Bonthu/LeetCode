@@ -1,0 +1,19 @@
+class Solution {
+    public int countPartitions(int[] nums) {
+        int n=nums.length;
+        int[] pf_sum=new int[n];
+        pf_sum[0]=nums[0];
+        for(int i=1;i<n;i++){
+            pf_sum[i]=pf_sum[i-1]+nums[i];
+        }
+        int c=0;
+        for(int i=0;i<n-1;i++){
+            int left_sub=pf_sum[i];
+            int right_sub=pf_sum[n-1]-pf_sum[i];
+            if((left_sub-right_sub)%2==0){
+                c++;
+            }
+        }
+        return c;
+    }
+}
