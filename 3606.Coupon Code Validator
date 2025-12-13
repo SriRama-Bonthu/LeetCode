@@ -1,0 +1,24 @@
+class Solution {
+    public List<String> validateCoupons(String[] code, String[] businessLine, boolean[] isActive) {
+        TreeMap<String, List<String>> hm = new TreeMap<>();
+        LinkedHashSet<String> ls=new LinkedHashSet<>();
+        ArrayList<String> l=new ArrayList<>();
+        ls.add("electronics");
+        ls.add("grocery");
+        ls.add("pharmacy");
+        ls.add("restaurant");
+        int n=code.length;
+        for(int i=0;i<n;i++){
+            if(code[i].matches("[A-Za-z0-9_]+") && isActive[i]!=false && ls.contains(businessLine[i])){
+                hm.computeIfAbsent(businessLine[i], k -> new ArrayList<>()).add(code[i]);
+            }
+        }
+        for(Map.Entry<String,List<String>> e:hm.entrySet()){
+            Collections.sort(e.getValue());
+            for(String j:e.getValue()){
+            l.add(j);
+        }
+        }
+    return l;
+    }
+}
