@@ -1,0 +1,23 @@
+class Solution {
+    public int sumOddLengthSubarrays(int[] arr) { 
+        int[] pf=new int[arr.length];
+        pf[0]=arr[0];
+        for(int i=1;i<arr.length;i++){
+            pf[i]=arr[i]+pf[i-1];
+        }
+        int sum=0;
+        for(int j=0;j<arr.length;j++){
+            for(int k=j;k<arr.length;k++){
+                if((k-j)%2==0){
+                    if(j>0){
+                        sum=sum+(pf[k]-pf[j-1]);
+                    }
+                    else{
+                    sum=sum+pf[k];
+                }
+                }
+            }
+        }
+        return sum;
+    }
+}
