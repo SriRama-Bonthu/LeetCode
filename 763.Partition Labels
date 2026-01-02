@@ -1,0 +1,41 @@
+class Solution {
+    public List<Integer> partitionLabels(String s) {
+        HashMap<Character,Integer> first=new LinkedHashMap<>();
+        HashMap<Character,Integer> last=new LinkedHashMap<>();
+        ArrayList<Integer> l=new ArrayList<>();
+        for(int i=0;i<s.length();i++){
+            if(first.containsKey(s.charAt(i))){
+                last.put(s.charAt(i),i);
+            }
+            else{
+                first.put(s.charAt(i),i);
+                last.put(s.charAt(i),i);
+            }
+        }
+        int[] fir=new int[first.size()];
+        int[] las=new int[last.size()];
+        int m=0;
+        for(Map.Entry<Character,Integer> e:first.entrySet()){
+            fir[m++]=e.getValue();
+        }
+        m=0;
+        for(Map.Entry<Character,Integer> e:last.entrySet()){
+            las[m++]=e.getValue();
+        }
+        int i=0;
+        int j=0;
+        while(j<las.length){
+            i=j;
+            int max=fir[i];
+            int min=las[i];
+            while(i<fir.length && fir[i]<=min){
+                min=Math.max(min,las[i]);
+                max=Math.min(max,fir[i]);
+                i++;
+            }
+            l.add(min-max+1);
+            j=i;
+        }
+        return l;
+    }
+}
