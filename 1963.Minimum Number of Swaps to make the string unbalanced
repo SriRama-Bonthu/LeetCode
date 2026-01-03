@@ -1,0 +1,18 @@
+class Solution {
+    public int minSwaps(String s) {
+        int i=0;
+        int n=s.length();
+        int j=n-1;
+        int c=0;
+        while(i<n){
+            if(s.charAt(i)=='['){
+                    c++;
+            }
+            else if(c>0){
+                c--;
+            }
+            i++;
+        }
+        return (c+1)/2;
+    }
+}
