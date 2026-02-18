@@ -1,0 +1,32 @@
+class Solution {
+    public int countBits(int num){
+        int c=0;
+        int rem=0;
+        while(num!=0){
+            rem=num%2;
+            c=c+rem;
+            num=num/2;
+        }
+        return c;
+    }
+    public List<String> readBinaryWatch(int turnedOn) {
+        ArrayList<String> res=new ArrayList<>();
+        for(int i=0;i<=11;i++){
+            for(int j=0;j<=59;j++){
+                String s="";
+                if(countBits(i)+countBits(j)==turnedOn){
+                    if(j<=9){
+                        s=i+":"+"0"+j;
+                    }
+                    else{
+                        s=i+":"+j;
+                    }
+                }
+                if(!s.isEmpty()){
+                    res.add(s);
+                }
+            }
+        }
+        return res;
+    }
+}
