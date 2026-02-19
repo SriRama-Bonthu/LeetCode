@@ -1,0 +1,43 @@
+class Solution {
+    // public boolean notBanned(ArrayList<Integer> ban,int key){
+    //     Collections.sort(ban);
+    //     int l=0;
+    //     int h=ban.size()-1;
+    //     while(l<=h){
+    //         int mid=(l+h)/2;
+    //         if(ban.get(mid)==key){
+    //             return false;
+    //         }
+    //         else if(ban.get(mid)<key){
+    //             l=mid+1;
+    //         }
+    //         else{
+    //             h=mid-1;
+    //         }
+            
+    //     }
+    //     return true;
+    // }
+    public int maxCount(int[] banned, int n, int maxSum) {
+        HashSet<Integer> l=new HashSet<>();
+        for(int i:banned){
+            l.add(i);
+        }
+        int s=0;
+        int c=0;
+       for(int i=1;i<=n;i++){
+        if(!l.contains(i)){
+            if(s+i<=maxSum){
+                // System.out.println(i);
+                s=s+i;
+                c++;
+                l.add(i);
+            }
+        }
+        if(s>=maxSum){
+            return c;
+        }
+       }
+       return c;
+    }
+}
