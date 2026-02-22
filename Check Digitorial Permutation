@@ -1,0 +1,45 @@
+class Solution {
+    public int factorial(int n){
+        if(n==0 || n==1){
+            return 1;
+        }
+        return n*factorial(n-1);
+    }
+    public boolean isDigitorialPermutation(int n) {
+        int rem=0;
+        int s=0;
+        if(n==0){
+            return false;
+        }
+        int inp=n;
+        int dc=0;
+        String ins=String.valueOf(inp);
+        int[] inArr=new int[ins.length()];
+        //Setting input digits into array and factorial sum
+        while(n!=0){
+            rem=n%10;
+            inArr[dc++]=rem;
+            s+=factorial(rem);
+            n=n/10;
+        }
+        int temp=s;
+        int output=s;
+        String ou=String.valueOf(temp);
+        if(ou.length()!=ins.length()){
+            return false;
+        }
+        //factorial sum digits into array
+        int[] outArr=new int[ou.length()];
+        rem=0;
+        dc=0;
+        while(temp!=0){
+            rem=temp%10;
+            outArr[dc++]=rem;
+            temp=temp/10;
+        }
+        //sorting
+        Arrays.sort(inArr);
+        Arrays.sort(outArr);
+        return Arrays.equals(inArr,outArr);
+    }
+}©leetcode
