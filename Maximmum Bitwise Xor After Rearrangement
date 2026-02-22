@@ -1,0 +1,29 @@
+class Solution {
+    public String maximumXor(String s, String t) {
+        int oc=0;
+        int zc=0;
+        for(int i=0;i<t.length();i++){
+            if(t.charAt(i)=='1'){
+                oc++;
+            }
+            else{
+                zc++;
+            }
+        }
+        StringBuilder sb=new StringBuilder();
+        for(char ch:s.toCharArray()){
+            if(ch=='1' && zc>0){
+                sb.append('1');
+                zc--;
+            }
+            else if(ch=='0' && oc>0){
+                sb.append('1');
+                oc--;
+            }
+            else{
+                sb.append('0');
+            }
+        }
+        return sb.toString();
+    }
+}©leetcode
