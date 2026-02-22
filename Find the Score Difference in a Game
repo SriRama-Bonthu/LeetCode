@@ -1,0 +1,32 @@
+class Solution {
+    public int scoreDifference(int[] nums) {
+        boolean first=true;
+        boolean second=false;
+        int f1=0;
+        int s1=0;
+        int c=5;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]%2!=0 ){
+                first=!first;
+                second=!second;
+                if((c==i) || i-c==6){
+                first=!first;
+                second=!second;
+                c=i;
+            }
+            }
+            else if(nums[i]%2==0 && (c==i || i-c==6)){
+                first=!first;
+                second=!second;
+                c=i;
+            }
+                if(first){
+                    f1+=nums[i];
+                }
+                else{
+                    s1+=nums[i];
+                }
+        }
+        return f1-s1;
+    }
+}©leetcode
