@@ -1,0 +1,22 @@
+class Solution {
+    public int numberOfPoints(List<List<Integer>> nums) {
+        Collections.sort(nums,(a,b)->Integer.compare(a.get(0),b.get(0)));
+        int s=nums.get(0).get(0);
+        int e=nums.get(0).get(1);
+        int total=0;
+        for(int i=1;i<nums.size();i++){
+            int a=nums.get(i).get(0);
+            int b=nums.get(i).get(1);
+            if(a<=e){
+                e=Math.max(e,b);
+            }
+            else{
+                total+=(e-s+1);
+                s=a;
+                e=b;
+            }
+        }
+        total+=(e-s+1);
+        return total;
+    }
+}
