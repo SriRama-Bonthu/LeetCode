@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [1004-max-consecutive-ones-iii](https://github.com/SriRama-Bonthu/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [2540-minimum-common-value](https://github.com/SriRama-Bonthu/LeetCode/tree/master/2540-minimum-common-value) |
 ## Hash Table
 |  |
@@ -16,5 +17,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Search
 |  |
 | ------- |
+| [1004-max-consecutive-ones-iii](https://github.com/SriRama-Bonthu/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [2540-minimum-common-value](https://github.com/SriRama-Bonthu/LeetCode/tree/master/2540-minimum-common-value) |
+## Sliding Window
+|  |
+| ------- |
+| [1004-max-consecutive-ones-iii](https://github.com/SriRama-Bonthu/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
+## Prefix Sum
+|  |
+| ------- |
+| [1004-max-consecutive-ones-iii](https://github.com/SriRama-Bonthu/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 <!---LeetCode Topics End-->
