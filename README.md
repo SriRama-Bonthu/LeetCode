@@ -27,4 +27,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1004-max-consecutive-ones-iii](https://github.com/SriRama-Bonthu/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
+## String
+|  |
+| ------- |
+| [1758-minimum-changes-to-make-alternating-binary-string](https://github.com/SriRama-Bonthu/LeetCode/tree/master/1758-minimum-changes-to-make-alternating-binary-string) |
 <!---LeetCode Topics End-->
