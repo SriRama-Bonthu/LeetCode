@@ -11,6 +11,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0992-subarrays-with-k-different-integers](https://github.com/SriRama-Bonthu/LeetCode/tree/master/0992-subarrays-with-k-different-integers) |
+| [2062-count-vowel-substrings-of-a-string](https://github.com/SriRama-Bonthu/LeetCode/tree/master/2062-count-vowel-substrings-of-a-string) |
 | [2540-minimum-common-value](https://github.com/SriRama-Bonthu/LeetCode/tree/master/2540-minimum-common-value) |
 ## Two Pointers
 |  |
@@ -34,6 +35,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1758-minimum-changes-to-make-alternating-binary-string](https://github.com/SriRama-Bonthu/LeetCode/tree/master/1758-minimum-changes-to-make-alternating-binary-string) |
+| [2062-count-vowel-substrings-of-a-string](https://github.com/SriRama-Bonthu/LeetCode/tree/master/2062-count-vowel-substrings-of-a-string) |
 ## Counting
 |  |
 | ------- |
