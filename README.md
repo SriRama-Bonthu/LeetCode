@@ -13,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0076-minimum-window-substring](https://github.com/SriRama-Bonthu/LeetCode/tree/master/0076-minimum-window-substring) |
 | [0992-subarrays-with-k-different-integers](https://github.com/SriRama-Bonthu/LeetCode/tree/master/0992-subarrays-with-k-different-integers) |
 | [2062-count-vowel-substrings-of-a-string](https://github.com/SriRama-Bonthu/LeetCode/tree/master/2062-count-vowel-substrings-of-a-string) |
 | [2540-minimum-common-value](https://github.com/SriRama-Bonthu/LeetCode/tree/master/2540-minimum-common-value) |
@@ -30,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sliding Window
 |  |
 | ------- |
+| [0076-minimum-window-substring](https://github.com/SriRama-Bonthu/LeetCode/tree/master/0076-minimum-window-substring) |
 | [0992-subarrays-with-k-different-integers](https://github.com/SriRama-Bonthu/LeetCode/tree/master/0992-subarrays-with-k-different-integers) |
 | [1004-max-consecutive-ones-iii](https://github.com/SriRama-Bonthu/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [1493-longest-subarray-of-1s-after-deleting-one-element](https://github.com/SriRama-Bonthu/LeetCode/tree/master/1493-longest-subarray-of-1s-after-deleting-one-element) |
@@ -42,6 +44,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0076-minimum-window-substring](https://github.com/SriRama-Bonthu/LeetCode/tree/master/0076-minimum-window-substring) |
 | [1758-minimum-changes-to-make-alternating-binary-string](https://github.com/SriRama-Bonthu/LeetCode/tree/master/1758-minimum-changes-to-make-alternating-binary-string) |
 | [2062-count-vowel-substrings-of-a-string](https://github.com/SriRama-Bonthu/LeetCode/tree/master/2062-count-vowel-substrings-of-a-string) |
 ## Counting
