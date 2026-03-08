@@ -1,0 +1,28 @@
+class Solution {
+    public String rec(StringBuilder sb,ArrayList<String> l,int m){
+        if(sb.length()==m){
+            if(!l.contains(sb.toString())){
+                return sb.toString();
+            }
+            return "";
+        }
+        sb.append("1");
+        String left=rec(sb,l,m);
+        sb.deleteCharAt(sb.length()-1);
+        if(!left.equals("")) return left;
+
+        sb.append("0");
+        String right=rec(sb,l,m);
+        sb.deleteCharAt(sb.length()-1);
+        return right;
+    }
+    public String findDifferentBinaryString(String[] nums) {
+        ArrayList<String> l=new ArrayList<>();
+        int m=nums[0].length();
+        for(String i:nums){
+            l.add(i);
+        }
+        StringBuilder sb=new StringBuilder();
+        return rec(sb,l,m);
+    }
+}
