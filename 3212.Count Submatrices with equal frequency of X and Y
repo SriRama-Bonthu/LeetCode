@@ -1,0 +1,29 @@
+class Solution {
+    public int numberOfSubmatrices(char[][] grid) {
+        int[][] px=new int[grid.length][grid[0].length];
+        int[][] py=new int[grid.length][grid[0].length];
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                int pxtop=(i>0)?px[i-1][j]:0;
+                int pxleft=(j>0)?px[i][j-1]:0;
+                int pxdiag=(i>0 && j>0)?px[i-1][j-1]:0;
+                
+                    px[i][j]=(grid[i][j]=='X'?1:0)+pxtop+pxleft-pxdiag;
+                    int pytop=(i>0)?py[i-1][j]:0;
+                int pyleft=(j>0)?py[i][j-1]:0;
+                int pydiag=(i>0 && j>0)?py[i-1][j-1]:0;
+                    py[i][j]=(grid[i][j]=='Y'?1:0)+pytop+pyleft-pydiag;
+            }
+        }
+        int cnt=0;
+        System.out.println(grid.length*grid[0].length);
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                if(px[i][j]>=1 && px[i][j]==py[i][j]){
+                    cnt++;
+                }
+            }
+        }
+        return cnt;
+    }
+}
