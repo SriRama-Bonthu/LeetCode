@@ -1,0 +1,20 @@
+class Solution {
+    public String interpret(String command) {
+        String s="";
+        for(int i=0;i<command.length()-1;i++){
+            if(command.charAt(i)=='(' && command.charAt(i+1)==')'){
+                 s=s+"o"; 
+            }
+            else if(command.charAt(i)=='a' && command.charAt(i+1)=='l'){
+                s=s+"al";
+            }
+            else if(command.charAt(i)=='G'){
+                s=s+"G";
+            }
+        }
+        if(command.charAt(command.length()-1)=='G'){
+            s=s+"G";
+        }
+        return s;
+    }
+}
