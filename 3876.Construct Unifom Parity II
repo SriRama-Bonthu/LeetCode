@@ -1,0 +1,29 @@
+class Solution {
+    public boolean uniformArray(int[] nums) {
+        int minval=Integer.MAX_VALUE;
+        int minodd=Integer.MAX_VALUE;
+        for(int i=0;i<nums.length;i++){
+             if(nums[i]<minval){
+                minval=nums[i];
+             }
+             if(nums[i]%2==1 && nums[i]<minodd){
+                minodd=nums[i];
+             }
+        }
+        
+        for(int i=0;i<nums.length;i++){
+            //check for no odd num;
+            if(minodd==Integer.MAX_VALUE){
+                return true;
+            }
+            if(minodd!=Integer.MAX_VALUE){
+                //check to convert all to odd
+                //if there is even number which is less than minimum odd number it cannot be converted into odd,so it is false;
+                if(nums[i]%2==0 && nums[i]<minodd){
+                  return false;
+                }
+            }
+        }
+        return true;
+    }
+}
